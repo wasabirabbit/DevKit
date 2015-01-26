@@ -1,0 +1,12 @@
+<?php
+define("LOCALCONF", true);
+include_once("resources/localconf.php");
+new ParsURL(0);  //Start number
+
+$page = isset($_GET["__PATH__"][0])? $_GET["__PATH__"][0] : "home";
+
+include_once("layouts/header.php");
+include_once("layouts/content.php");
+include_once("layouts/footer.php");
+
+?>

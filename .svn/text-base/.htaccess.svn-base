@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^sysomos\.com
+RewriteRule (.*) http://www.sysomos.com/$1 [R=301,L]
+RewriteRule ^(([^/]+/)*[^./]+)$ /$1/ [R=301,L]
+RewriteRule ^(.*)products/features/$ /$1social-media-monitoring/ [R=301,L]
+RewriteRule ^(.*)products/overview/$ /$1products/ [R=301,L]
+RewriteRule ^(.*)company/about-us/$ /$1company/ [R=301,L]
+RewriteRule ^(.*)solutions/overview/$ /$1solutions/ [R=301,L]
+RewriteRule ^(.*)social-media/$ /$1social-media/reports/  [R=301,L]
+RewriteRule ^(.*)company/reports-and-whitepapers/$ /$1social-media/reports/  [R=301,L]
+RewriteRule ^(.*)company/social-media-marketing/$ /$1social-media/marketing/  [R=301,L]
+RewriteRule ^(.*)company/social-media-marketing/structuring-social-media-teams-for-your-business/$ /$1social-media/marketing/structuring-social-media-teams-for-your-business/  [R=301,L]
+RewriteRule ^(.*)company/social-media-marketing/social-media-reputation-management/$ /$1social-media/marketing/social-media-reputation-management/  [R=301,L]
+RewriteRule ^(.*)company/social-media-marketing/different-types-of-social-media-channels/$ /$1social-media/marketing/different-types-of-social-media-channels/  [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !/scripts
+RewriteCond %{REQUEST_FILENAME} !/styles
+RewriteCond %{REQUEST_FILENAME} !/images
+RewriteCond %{ENV:REDIRECT_STATUS} !^401$
+RewriteRule ^(/|.*)$ /index.php [L,QSA]
