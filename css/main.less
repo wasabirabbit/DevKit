@@ -1,22 +1,115 @@
  /*
-Description: Wasabi Rabbit DevKit v1.0
+Description: Wasabi Rabbit DevKit v1.0 - Main CSS
 Developer: CWilliams
 Start Date: 2015.02.24
 */	
 
-@import "/plugin/normalize.css"; 
-@import "/plugin/foundation.min.css"; 
-// @import "fonts.less"; 
+
+////////  Imports  //////// 
 @import "definitions.less";
 
 
+////////  Globals  //////// 
+* { 
+	margin: 0; 
+	}
+html, body { 
+	font-size: 16px;
+	} 
+.Wrap { 
+	width: 100%; 
+	min-height: 100%; 
+	height: auto !important; 
+	height: 100%; 
+	margin: 0 auto -100px;
+	}
+.header, .Page-Content, .footer { 
+	width: 100%; 
+	margin: 0 
+	auto;
+	}
+.push, .footer { 
+	clear: both; 
+	height: 100px; 
+	}
+
+// Typography
+a { 
+	.transit; 
+	&:hover { 
+		color: @grey; 
+		}
+	}
+p, li { 
+	color: @darkgrey; 
+	.transit; 
+	small { 
+		font-size: .7em;
+		}
+	}
+h1, h2, h3, h4, h5 { 
+	margin: 10px 0; 
+	.transit; 
+	font-weight: bold; 
+}
+h1 {} 
+h2 {} 
+h3 {} 
+h4 {} 
+h5 {} 
+h6 {}
+
+
+//////// Template Styles  ////////
+
+header {
+	background: @white;
+	& .menu-toggle {
+		display: none;
+		-webkit-backface-visibility: hidden;
+		-webkit-transition: all .2s;
+		-moz-transition: all .2s;
+		-o-transition: all .2s;
+		-ms-transition: all .2s;
+		transition: all .2s;
+		padding: 1.65em 0.55em 1.65em 0;
+		float: right;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+section.menu-slideout { 
+	z-index: 99999999; 
+	position: fixed; 
+	width: 250px; 
+	top: 0;
+	right: 0; 
+	height: 100%; 
+	background: rgba(255, 255, 255, 0.9); 
+	.transform3d(300px,0,0); 
+	.transit; -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+	-moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+	box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+	&.show { .transform3d;}
+	.menu-toggle { display: block;
+		& img {
+			padding: 18px 0;
+			}
+	}
+}
+
+section.Page-Content {}
+footer {}
 
 
 
 
 
 
-
-
-
+// Media Queries Import
 @import "queries.less"; 
+
+
+
