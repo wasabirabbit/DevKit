@@ -14,7 +14,7 @@ $(document).ready(function () {
  $('.flex-vertical').flexslider({
     animation: "slide",
     slideshow: true,
-    reverse: true,
+    reverse: true, 
     animationLoop: true,   
     touch: false,
     keyboard: true 
