@@ -1,0 +1,177 @@
+// WR Vertical Grid System
+
+@smref: 68.1em;
+@mdref: 68.1em;
+@lgref: 68.1em;
+
+
+.row {
+	// padding-right: .25em;
+	// padding-left: .25em;
+}
+.column, .columns {
+	// padding-left: 0.25em;
+	// padding-right: 0.25em;
+    &.special {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+}
+
+
+.blok, .bloks {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	display: block;
+	overflow: hidden;
+    padding: 4rem 3rem;
+    & .bottom {
+        bottom: 0;
+        position: absolute;
+        margin: 0 35px 45px 0;
+    }
+}
+
+
+.row .row {
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+
+/*Small*/
+@media only screen and (max-width: 40em) {
+    .bloks {
+        padding: 1.5rem;
+        & .bottom {
+            bottom: 0;
+            position: absolute;
+            margin: 0 15px 15px 0;
+        }
+    }
+    .sml {
+    }
+    .sml-1 {
+        height: .0833333 * @smref;
+    }
+    .sml-2 {
+        height: .1666667 * @smref;
+    }
+    .sml-3 {
+        height: .25 * @smref;
+    }
+    .sml-4 {
+        height: .3333333 * @smref;
+    }
+    .sml-5 {
+        height: .4166667 * @smref;
+    }
+    .sml-6 {
+        height: .50 * @smref;
+    }
+    .sml-7 {
+        height: .5833333 * @smref;
+    }
+    .sml-8 {
+        height: .6666667 * @smref;
+    }
+    .sml-9 {
+        height: .75 * @smref;
+    }
+    .sml-10 {
+        height: .8333333 * @smref;
+    }
+    .sml-11 {
+        height: .9166667 * @smref;
+    }
+    .sml-12 {
+        height: @smref;
+    }
+}
+/*Medium*/
+ @media only screen and (min-width: 40.063em) {
+    .bloks {
+        padding: 4rem 3rem;
+    }
+    .med {
+    }
+    .med-1 {
+        height: .0833333 * @mdref;
+    }
+    .med-2 {
+        height: .1666667 * @mdref;
+    }
+    .med-3 {
+        height: .25 * @mdref;
+    }
+    .med-4 {
+        height: .3333333 * @mdref;
+    }
+    .med-5 {
+        height: .4166667 * @mdref;
+    }
+    .med-6 {
+        height: .50 * @mdref;
+    }
+    .med-7 {
+        height: .5833333 * @mdref;
+    }
+    .med-8 {
+        height: .6666667 * @mdref;
+    }
+    .med-9 {
+        height: .75 * @mdref;
+    }
+    .med-10 {
+        height: .8333333 * @mdref;
+    }
+    .med-11 {
+        height: .9166667 * @mdref;
+    }
+    .med-12 {
+        height: @mdref;
+    }
+}
+
+/*Large*/
+
+ @media only screen and (min-width: 64.063em) {
+    .lg {
+    }
+    .lg-1 {
+        height: .0833333 * @lgref;
+    }
+    .lg-2 {
+        height: .1666667 * @lgref;
+    }
+    .lg-3 {
+        height: .25 * @lgref;
+    }
+    .lg-4 {
+        height: .3333333 * @lgref;
+    }
+    .lg-5 {
+        height: .4166667 * @lgref;
+    }
+    .lg-6 {
+        height: .50 * @lgref;
+    }
+    .lg-7 {
+        height: .5833333 * @lgref;
+    }
+    .lg-8 {
+        height: .6666667 * @lgref;
+    }
+    .lg-9 {
+        height: .75 * @lgref;
+    }
+    .lg-10 {
+        height: .8333333 * @lgref;
+    }
+    .lg-11 {
+        height: .9166667 * @lgref;
+    }
+    .lg-12 {
+        height: @lgref;
+    }
+}
