@@ -81,6 +81,61 @@ header {
 	}
 }
 
+.menu-toggle {
+  z-index: 999999999;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+ 
+  .transform(@rules) {
+  -webkit-transform: @rules;  
+  -moz-transform: @rules;  
+  transform: @rules;
+} 
+
+.transition(@rules) {
+  -webkit-transition: @rules;  
+  -moz-transition: @rules;    
+  transition: @rules;
+} 
+  span {
+    display: block; 
+    text-align: center;  
+    width: 40px;
+    height: 5px;
+    margin: 0;
+    border-radius: 3px;
+    background: @orange;
+    margin-bottom: 5px; 
+    .transition(0.25s); 
+     
+    &:last-child {  
+      margin-bottom: 0;
+    }
+  } 
+  
+  /* all the magic starts here */ 
+  
+  &.open {
+    
+    span {
+      .transform(scaleX(0));
+        
+      &:first-child {
+        position: relative; 
+        top: 10px;
+        .transform(rotate(45deg));
+      } 
+      
+      &:last-child {
+        position: relative;
+        top: -10px;
+        .transform(rotate(-45deg));
+      }
+    }
+  }
+}
+
 section.menu-slideout { 
 	z-index: 99999999; 
 	position: fixed; 

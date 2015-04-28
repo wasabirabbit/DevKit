@@ -301,20 +301,46 @@
     }
 }
 
+/// Flex
 .flexslider {
-	margin: 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	box-shadow: none;
-	-webkit-box-shadow: none;
-	& ul {
+	position: relative;
+	height: 550px;
+
+	& .flex-viewport {
+		height: 550px; 
+	}
+	& .flex-control-nav {
+		z-index: 9999;
+		left: 3%;
+		top: 50%;
+		width: 25px;
+		li {
+			display: block;
+			margin: 10px;
+			& a {
+				background-color: rgba(255, 255, 255, 0);
+				border: 1px @white solid;
+				&.flex-active {
+								background-color: @white;
+								border: 1px @white solid; 
+						}
+			}
+		} 
+	}
+	& ul.slides {
 		& li {
+			height: 550px;
 			background-size: cover;
-			background: center center;
-			background-repeat: no-repeat;
+			background-position: center;
+			& .row, .columns {height: 100%;}
+			& .bottom {
+				position: absolute;
+				bottom: 3%;
+			}				
 		}
 	}
 }
+
+.flex-direction-nav {display: none;}
 
 //////// DEFINITIONS [END] ////////
