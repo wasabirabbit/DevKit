@@ -166,8 +166,36 @@ footer {}
 
 
 
-
-
+.easyform {
+	& input {
+		background-color: rgba(255, 255, 255, 0) !important;
+		border: solid 2px @black;
+		border-radius: 10px;
+		color: @black;
+	}
+	::-webkit-input-placeholder { /* WebKit browsers */
+    color:@black;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:@orange;
+   opacity:  1;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+   		color:@black;
+   	opacity:  1;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:@black;
+	}	
+	& textarea {
+		background-color: rgba(255, 255, 255, 0);
+		border: solid 2px @black;
+		border-radius: 10px;
+	} 
+	& .button {
+		width: 100%;
+	}
+}
 
 // Media Queries Import
 @import "queries.less"; 
