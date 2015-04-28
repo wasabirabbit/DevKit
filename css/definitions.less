@@ -28,7 +28,7 @@
 .bg-grey { background-color: @grey; }
 .bg-darkgrey { background-color: @darkgrey; }
 .bg-brown { background-color: @brown; }
-.bg-beige { background: rgba(240, 236, 229, 0.2); }
+.bg-clear { background: rgba(240, 236, 229, 0); }
 
 /* Text Colors */
 .text-body { color: @body; }
@@ -85,6 +85,74 @@
 .padded { padding-top: 5em; padding-bottom: 5em; }
 .padded-top { padding-top: 5em; }
 .padded-bottom { padding-bottom: 5em; }
+
+.padded { 
+	padding-top: 5em; 
+	padding-bottom: 5em; 
+	&.less { 
+		padding-top: 3em; 
+		padding-bottom: 3em;
+	}
+	&.tiny { 
+		padding-top: 1em; 
+		padding-bottom: 1em;
+	}	
+}
+.padded-top { 
+	padding-top: 5em; 
+	&.less { 
+		padding-top: 3em; 
+	}
+	&.tiny { 
+		padding-top: 1em;  
+	}	
+	&.flexslider-quote {
+		padding-top: 8em;
+	}
+	&.university {
+		padding-top: 2em;
+	}
+}
+.padded-bottom { 
+	padding-bottom: 5em; 
+	&.less { 
+		padding-bottom: 3em;
+	}
+	&.tiny { 
+		padding-bottom: 1em;
+	}	
+}
+.margined { 
+	margin-top: 5em; 
+	margin-bottom: 5em; 
+	&.less { 
+		margin-top: 3em; 
+		margin-bottom: 3em;
+	}
+	&.tiny { 
+		margin-top: 1em; 
+		margin-bottom: 1em;
+	}	
+}
+.margined-top { 
+	margin-top: 5em; 
+	&.less { 
+		margin-top: 3em; 
+	}
+	&.tiny { 
+		margin-top: 1em; 
+	}	
+}
+.margined-bottom { 
+	margin-bottom: 5em; 
+	&.less { 
+		margin-bottom: 3em;
+	}
+	&.tiny { 
+		margin-bottom: 1em;
+	}	
+}
+
 
 // Positioning
 .f-l {float: left;}
